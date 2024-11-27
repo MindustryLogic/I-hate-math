@@ -1,5 +1,6 @@
 #!/usr/bin/env python
 print("hello world")
+print("wait 5 whole second lol")
 import time
 time.sleep(5)
 print("The actual programm thing start here and i will not remove this part")
