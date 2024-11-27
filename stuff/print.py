@@ -9,19 +9,51 @@ print("The actual programm thing start here and i will not remove this part")
 #ya basic math operator should seperate em
 #before that do the basic of basic
 def b_add():
- a = float(input("number here please "))
- b = float(input("number here please "))
+ input1 = float(input("number here please "))
+ input2 = float(input("number here please "))
  print("this is addition ")
- result = a + b
- print(f"{a}+{b}={result}")
+ result = input1 + input2
+ print(f"{input1}+{input2}={result}")
  inf()
+ 
+def op_id(str, ch):
+    for i, ltr in enumerate(str):
+        if ltr == ch:
+            yield i
  
 def inf():
  print("continue? Y/n")
- more = input("Y/n ")
+ more = input("Y/n: ")
  if "Y" in more:
     b_add()
  if "n" in more:
-    exit
+    mode_sele()
  
-b_add()
+ 
+def mode_sele():
+ print("work for currently working stuff, exp for indev mode ig")
+ mode = input("uh what mode u want use type it exactly idk ")
+ if "work" in mode:
+   b_add()
+ else :
+    temp()
+    
+    
+def temp():
+    eq_input = input("type equation here: ")
+    op_included_start = eq_input.find("+" or "-", 0, 1)
+    eq_input_1st_num = eq_input[0]
+    if "-1" == op_included_start:
+       eq_input.replace(eq_input[0], +eq_input[0])
+    print(op_included_start)
+    print(eq_input_1st_num)
+    print(list(op_id(eq_input, "+")))
+    print(list(op_id(eq_input, "-")))
+    print(list(op_id(eq_input, "*")))
+    print(list(op_id(eq_input, "/")))
+    num_count = len(list(op_id(eq_input, "+"))) + len(list(op_id(eq_input, "-"))) + len(list(op_id(eq_input, "*"))) + len(list(op_id(eq_input, "/")))
+    print(num_count)
+
+    
+
+mode_sele()

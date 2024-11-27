@@ -1,10 +1,12 @@
 #!/usr/bin/env python
 import re
-b = 'This is a'
-print(b.index('is'))
+import time
+b = '+9+88+90'
 
 def stack(str, ch):
     for i, ltr in enumerate(str):
         if ltr == ch:
-            yield
-print(f"list(stack(b, "is"))")
+            yield i
+
+print(list(stack(b, "+")))
+
