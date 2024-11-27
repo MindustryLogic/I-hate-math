@@ -1,4 +1,5 @@
 #!/usr/bin/env python
+#GPL-3.0-only or GPL-3.0-or-later
 print("hello world")
 print("wait 5 whole second lol")
 import time
