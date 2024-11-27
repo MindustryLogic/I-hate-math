@@ -9,8 +9,8 @@ print("The actual programm thing start here and i will not remove this part")
 #ya basic math operator should seperate em
 #before that do the basic of basic
 def b_add():
- a = float(input("number here please"))
- b = float(input("number here please"))
+ a = float(input("number here please "))
+ b = float(input("number here please "))
  print("this is addition ")
  result = a + b
  print(f"{a}+{b}={result}")
@@ -18,7 +18,7 @@ def b_add():
  
 def inf():
  print("continue? Y/n")
- more = input("Y/n")
+ more = input("Y/n ")
  if "Y" in more:
     b_add()
  if "n" in more:
