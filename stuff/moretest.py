@@ -1,3 +1,4 @@
+#/usr/bin/env python
 import time
 x = ['6', '+', '9', '+', '77', '-', '4']
 y = '6+9+77-4'
@@ -39,5 +40,6 @@ for i in y:
 print("huhuhuhuhu")
 print(alist)
 
-long += alist[0] + alist[1]
+long = []
+long = alist[0] + alist[1]
 print(long)
