@@ -63,14 +63,26 @@ def temp():
     print(list(op_id(eq_input, "-")))
     print(list(op_id(eq_input, "*")))
     print(list(op_id(eq_input, "/")))
+    print(list(op_id(eq_input_first_fix, "+")))
+    print(list(op_id(eq_input_first_fix, "-")))
+    print(list(op_id(eq_input_first_fix, "*")))
+    print(list(op_id(eq_input_first_fix, "/")))
     num_count = len(list(op_id(eq_input, "+"))) + len(list(op_id(eq_input, "-"))) + len(list(op_id(eq_input, "*"))) + len(list(op_id(eq_input, "/")))
+    fix_num_count = len(list(op_id(eq_input_first_fix, "+"))) + len(list(op_id(eq_input_first_fix, "-"))) + len(list(op_id(eq_input_first_fix, "*"))) + len(list(op_id(eq_input_first_fix, "/")))
     print(num_count)
+    print(fix_num_count)
     basic_cal()
     mode_sele()
 
 def basic_cal():
+   scan = 0
    eq_list = []
    for i in eq_input_first_fix:
-      eq_list.append(eq_input_first_fix[:])
+      eq_list.append(eq_input_first_fix[scan:scan + 1])
+      scan = scan+1
    print(eq_list)
+   op_lo_list = list(op_id(eq_input_first_fix, "+")) + list(op_id(eq_input_first_fix, "-")) + list(op_id(eq_input_first_fix, "*")) + list(op_id(eq_input_first_fix, "/"))
+   op_lo_list.sort()
+   print(op_lo_list)
+   
 mode_sele()
