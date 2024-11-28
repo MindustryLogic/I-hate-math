@@ -33,11 +33,12 @@ def inf():
 def mode_sele():
  print("work for currently working stuff, exp for indev mode ig, and exit kill the programm")
  mode = input("uh what mode u want use type it exactly idk ")
- if "work" in mode:
+ match mode:
+  case "work":
    b_add()
- if "exit" in mode:
+  case "exit":
     exit
- else :
+  case "exp":
     temp()
     
     
@@ -84,5 +85,4 @@ def basic_cal():
    op_lo_list = list(op_id(eq_input_first_fix, "+")) + list(op_id(eq_input_first_fix, "-")) + list(op_id(eq_input_first_fix, "*")) + list(op_id(eq_input_first_fix, "/"))
    op_lo_list.sort()
    print(op_lo_list)
-   
 mode_sele()
