@@ -43,6 +43,7 @@ def mode_sele():
     
 def temp():
     eq_input = str(input("type equation here: "))
+    global eq_input_first_fix
     eq_input_first_fix = ""
     op_included_start = eq_input.find("+" or "-", 0, 1)
     eq_input_1st_num = eq_input[0]
@@ -64,8 +65,12 @@ def temp():
     print(list(op_id(eq_input, "/")))
     num_count = len(list(op_id(eq_input, "+"))) + len(list(op_id(eq_input, "-"))) + len(list(op_id(eq_input, "*"))) + len(list(op_id(eq_input, "/")))
     print(num_count)
+    basic_cal()
     mode_sele()
 
-    
-
+def basic_cal():
+   eq_list = []
+   for i in eq_input_first_fix:
+      eq_list.append(eq_input_first_fix[:])
+   print(eq_list)
 mode_sele()
