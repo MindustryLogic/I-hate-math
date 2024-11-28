@@ -42,16 +42,19 @@ def mode_sele():
     
     
 def temp():
-    eq_input = input("type equation here: ")
+    eq_input = str(input("type equation here: "))
     eq_input_first_fix = ""
     op_included_start = eq_input.find("+" or "-", 0, 1)
     eq_input_1st_num = eq_input[0]
-    if "-1" == op_included_start:
-       eq_input_first_fix = "9"
+    if -1 is op_included_start:
+       eq_input_first_fix = "+" + eq_input
+       print("it have a thing)")
     else :
        eq_input_first_fix = eq_input
+       print("it no thing")
 
     print(op_included_start)
+    print(type(op_included_start))
     print(eq_input_1st_num)
     print(eq_input[0])
     print(eq_input_first_fix)
