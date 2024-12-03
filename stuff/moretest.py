@@ -43,3 +43,7 @@ print(alist)
 long = []
 long = alist[0] + alist[1]
 print(long)
+loong = compile(y, "<string>", "eval")
+looong = eval(loong)
+print(looong)
+#so all this for nothing very cool
