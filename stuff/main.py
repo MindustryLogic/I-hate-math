@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 #GPL-3.0-only or GPL-3.0-or-later
 print("hello world")
+import math
 def mode_sele():
     print("ari for arithmetic(basic math), exit to exit")
     mode = input("type mode here: ")
@@ -41,6 +42,25 @@ def op_id(str, ch):
     for i, ltr in enumerate(str):
         if ltr == ch:
             yield i
-mode_sele()
+
 def step_by_step():
-    return()
+    start = 0
+    end = 0
+    eq_sep = []
+    eq_sep_tu = ()
+    scan = 0
+    for i in eq:
+        if scan < len(eq):
+            scan = scan+1
+            try:
+                if eq[scan].isnumeric() == False:
+                    end = scan
+                    eq_sep.append(eq[start:end])
+                    start = end
+            except IndexError:
+                eq_sep.append(eq[start:])
+    eq_sep_tu = tuple(eq_sep)
+    print(eq_sep)
+    print(eq_sep_tu)
+mode_sele()
+
