@@ -2,6 +2,7 @@
 #GPL-3.0-only or GPL-3.0-or-later
 print("hello world")
 def mode_sele():
+    #this part just let you select mode
     print("ari for arithmetic(basic math), exit to exit")
     mode = input("type mode here: ")
     match mode:
@@ -10,6 +11,7 @@ def mode_sele():
         case "exit":
             exit
 def ari():
+    #self explained
     print("Arithmetic mode a.k.a +-*/ selected")
     global eq
     eq = input("equation here: ")
@@ -43,4 +45,4 @@ def op_id(str, ch):
             yield i
 mode_sele()
 def step_by_step():
-    return()
+    #reconize and order the eq with ()>* or / > + or -
