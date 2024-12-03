@@ -13,10 +13,19 @@ def ari():
     print("Arithmetic mode a.k.a +-*/ selected")
     global eq
     eq = input("equation here: ")
-    result = eval(compile(eq, "<string>", "eval"))
-    print(f"{eq}={result}")
+    step_comfirm()
+    if step_ava == False:
+        result = eval(compile(eq, "<string>", "eval"))
+        print(f"{eq}={result}")
+    else:
+        print("makin'")
 def step_comfirm():
-
+    global step_ava
+    if len(list(op_id(eq, "*")) or list(op_id(eq, "/")) or list(op_id(eq, "(")) or list(op_id(eq, ")"))) != 0:
+        step_ava = bool(True)
+    else:
+        step_ava = bool(False)
+        
 def op_id(str, ch):
     for i, ltr in enumerate(str):
         if ltr == ch:
