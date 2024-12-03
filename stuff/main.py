@@ -3,6 +3,7 @@
 print("hello world")
 import math
 def mode_sele():
+    #this part just let you select mode
     print("ari for arithmetic(basic math), exit to exit")
     mode = input("type mode here: ")
     match mode:
@@ -11,6 +12,7 @@ def mode_sele():
         case "exit":
             exit
 def ari():
+    #self explained
     print("Arithmetic mode a.k.a +-*/ selected")
     global eq
     eq = input("equation here: ")
