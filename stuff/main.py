@@ -17,8 +17,19 @@ def ari():
     if step_ava == False:
         result = eval(compile(eq, "<string>", "eval"))
         print(f"{eq}={result}")
+        mode_sele()
     else:
-        print("makin'")
+        result = eval(compile(eq, "<string>", "eval"))
+        step_show = input("show steps? (Y/n): ")
+        match step_show:
+            case "Y":
+                print("makin")
+                step_by_step()
+                print(f"={result}")
+                mode_sele()
+            case "n":
+                print(f"{eq}={result}")
+                mode_sele()
 def step_comfirm():
     global step_ava
     if len(list(op_id(eq, "*")) or list(op_id(eq, "/")) or list(op_id(eq, "(")) or list(op_id(eq, ")"))) != 0:
@@ -31,3 +42,5 @@ def op_id(str, ch):
         if ltr == ch:
             yield i
 mode_sele()
+def step_by_step():
+    return()
