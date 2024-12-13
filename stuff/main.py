@@ -58,11 +58,15 @@ def step_by_step():
                 if eq[scan].isnumeric() == False:
                     end = scan
                     eq_sep.append(eq[start:end])
-                    start = end
+                    eq_sep.append(eq[end:end+1])
+                    start = end+1
             except IndexError:
                 eq_sep.append(eq[start:])
     eq_sep_tu = tuple(eq_sep)
     print(eq_sep)
     print(eq_sep_tu)
+    #The step part
+    n = 0
+    print("Rule of thumb:() then * or / then + or -")
 mode_sele()
 
